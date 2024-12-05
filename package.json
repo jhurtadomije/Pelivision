@@ -5,17 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "echo 'Build script placeholder'"
+    "build": "echo 'Build script placeholder'",
     "deploy": "vercel --prod"
   },
   "dependencies": {
     "dotenv": "^16.4.7"
   }
 }
-  
-
- 
-
-   
    
  
