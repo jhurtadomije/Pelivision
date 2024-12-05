@@ -1,16 +1,14 @@
 {
   "name": "pelivision",
   "version": "1.0.0",
-  "description": "web de busqueda de peliculas y series",
+  "description": "Descripción de tu proyecto",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "build": "echo 'Build script placeholder'",
-    "deploy": "vercel --prod"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "vercel": "^24.0.0"
+    "gh-pages": "^3.2.3"
   }
 }
-   
- 
