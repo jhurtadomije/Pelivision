@@ -1,9 +1,12 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,4 +27,4 @@ jobs:
     - name: Deploy
       run: npm run deploy
       env:
-        API_KEY: ${{ secrets.API_KEY }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
