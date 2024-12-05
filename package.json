@@ -1,5 +1,14 @@
 {
+  "name": "pelivision",
+  "version": "1.0.0",
+  "description": "web de busqueda de peliculas y series",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'Build script placeholder'"
+  },
   "dependencies": {
     "dotenv": "^16.4.7"
   }
 }
+  
