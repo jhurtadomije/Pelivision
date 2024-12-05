@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Pelívisión</title>
+            <!-- Iconos de Font Awesome -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <!-- Archivo CSS -->
+            <link rel="stylesheet" href="css/estilos.css">
+            <!-- Biblioteca de Google Charts -->
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <!-- Archivo JavaScript -->
+            <script src="index.js" defer></script>
+        </head>
+
+        <body>
+            <!-- **Encabezado de la Página** -->
+            <header>
+                <!-- Logo y Descripción -->
+                <div class="contenedor">
+                    <div class="logo">
+                        <img src="imagenes/logo.png" alt="Logo Películas Populares" class="logo-imagen">
+                        <p>Peli<span>Vision.</span></p>
+                    </div>
+                    <div class="descripcion-sitio">
+                        <h2>Bienvenido a <strong>Pelivision</strong></h2>
+                        <p>Descubre información detallada sobre tus películas y series favoritas.</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- **Barra de Búsqueda y Filtros** -->
+            <nav>
+                <div class="contenedor-busqueda">
+                    <div class="buscar-elemento">
+                        <h3>Busca tu Película o Serie:</h3>
+                        <div class="barra-busqueda">
+                            <!-- Opciones de Filtrado -->
+                            <select id="filtro-tipo">
+                                <option value="">Todos</option>
+                                <option value="movie">Películas</option>
+                                <option value="series">Series</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="Buscar título..." id="caja-busqueda-pelicula" aria-label="buscar-pelicula">
+                            <button id="btn-buscar" aria-label="buscarPelicula">Buscar</button>
+                            <!-- Contenedor para el botón "Crear Informe" -->
+                            <div class="contenedor-informe-header">
+                                <button id="btn-crear-informe" aria-label="crear-informe">Crear Informe</button>
+                            </div>
+                            <div class="listaBusqueda" id="lista-busqueda">
+                                <!-- Lista de resultados -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- **Contenido Principal** -->
+            <main>
+                <!-- **Sección de Resultados** -->
+                <section id="seccion-resultados">
+                    <div class="contenedor">
+                        <div class="contenedor-resultados">
+                            <!-- Contenedor del GIF de Carga -->
+                            <div class="contenedor-carga" id="contenedor-carga">
+                                <img src="imagenes/palomitas.gif" alt="Cargando..." id="gif-carga">
+                                    <p class="preparandoPalomitas">Preparando palomitas...</p>
+                            </div>
+
+                            <!-- Contenedor de las Tarjetas de las Películas -->
+                            <div class="contenedor-peliculas" id="contenedor-peliculas">
+                                <!-- Tarjetas de películas se cargarán aquí -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- **Modal para el Informe** -->
+                <section id="seccion-modal-informe">
+                    <div class="modal-informe oculto">
+                        <div class="modal-contenido">
+                            <span class="cerrar-informe">&times;</span>
+                            <div id="contenedorInforme">
+                                <div id="grafico-rating" style="width: 100%; height: 500px;"></div>
+                                <div id="grafico-recaudacion" style="width: 100%; height: 500px;"></div>
+                                <div id="grafico-votos" style="width: 100%; height: 500px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- **Modal para Detalles de la Película** -->
+                <section id="seccion-modal">
+                    <div class="modal-detalles">
+                        <div class="modal-contenido">
+                            <span class="cerrar">&times;</span>
+                            <div id="contenido-detalles">
+                                <!-- El detalle de la película se muestra aquí -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- **Pie de Página** -->
+            <footer>
+                <div class="contenedor-footer">
+                    <p>&copy; 2024 Pelivisión. Todos los derechos reservados.</p>
+                </div>
+            </footer>
+        </body>
+</html>
