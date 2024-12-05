@@ -1,0 +1,11 @@
+/* Pie de Página (Footer) */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    text-align: center;
+}
+
+footer .contenedor-footer p {
+    margin-top: 15%;
+    font-size: 14px;
+}

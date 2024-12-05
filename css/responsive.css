@@ -1,0 +1,68 @@
+/* Diseño Responsivo */
+@media screen and (max-width: 768px) {
+    /* Ajustes para dispositivos móviles */
+
+    /* ----- Tarjetas ----- */
+    #seccion-resultados .tarjeta {
+        width: 45%;
+        height: auto;
+    }
+
+    /* ----- Barra de Búsqueda ----- */
+    nav .barra-busqueda {
+        flex-direction: column;
+    }
+
+    nav .barra-busqueda select,
+    nav .barra-busqueda input {
+        margin: 0.3125rem 0;
+        width: 900%;
+        font-size: 1rem;
+    }
+
+    nav .barra-busqueda button {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    /* ----- Modal en Móvil ----- */
+    #seccion-modal #contenido-detalles img {
+        width: 90%;
+        float: none;
+        margin: 0 0 1.25rem 0;
+    }
+
+    /* ----- Texto del Modal ----- */
+    #seccion-modal #contenido-detalles p {
+        text-align: justify;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    /* Ajustes para pantallas más grandes */
+    #seccion-resultados .tarjeta {
+        width: 20%;
+        margin: 1.25rem;
+    }
+
+    nav .barra-busqueda select,
+    nav .barra-busqueda input,
+    nav .barra-busqueda button {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes para pantallas pequeñas (dispositivos muy pequeños) */
+    #seccion-resultados .tarjeta {
+        width: 90%;
+        height: auto;
+    }
+
+    nav .barra-busqueda select,
+    nav .barra-busqueda input,
+    nav .barra-busqueda button {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+}

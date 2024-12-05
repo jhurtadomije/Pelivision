@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("header.css");
+@import url("main.css");
+@import url("nav.css");
+@import url("footer.css");
+
+/* Estilos Generales */
+html {
+    font-size: 100%;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #533483);
+    font-family: 'Inter', 'Arial', sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Estilos para tabletas */
+@media (min-width: 481px) and (max-width: 1024px) {
+    /* Ajustes específicos para tablets */
+    .contenedor {
+        width: 90%;
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+    /* Ajustes específicos para móviles */
+    body {
+        background: #1a1a1a;
+        font-size: 0.9rem;
+    }
+
+    .contenedor {
+        width: 100%;
+        padding: 0 2em;
+    }
+
+    .logo-imagen {
+        width: 5em;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Estilos para computadoras de escritorio grandes */
+@media (min-width: 1025px) {
+    .contenedor {
+        width: 80%;
+    }
+}

@@ -1,0 +1,272 @@
+/* Contenido Principal (Main) */
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* ----- Sección de Resultados ----- */
+#seccion-resultados .contenedor {
+    min-height: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    position: relative;
+    padding: 1rem;
+}
+
+#seccion-resultados .contenedor-carga {
+    text-align: center;
+}
+
+#seccion-resultados #gif-carga {
+    width: 6.25rem;
+}
+
+#seccion-resultados .contenedor-peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9.375rem, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+#seccion-resultados .tarjeta {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    perspective: 62.5rem;
+    cursor: pointer;
+    margin: 0;
+}
+
+#seccion-resultados .tarjeta-contenido {
+    position: relative;
+    width: 100%;
+    height: 18.75rem;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+#seccion-resultados .tarjeta.voltear .tarjeta-contenido {
+    transform: rotateY(180deg);
+}
+
+#seccion-resultados .tarjeta-frente,
+#seccion-resultados .tarjeta-dorso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+#seccion-resultados .tarjeta-frente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#seccion-resultados .tarjeta-dorso {
+    background-color: #000;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 1.25rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#seccion-resultados .tarjeta-dorso h3 {
+    margin-top: 0;
+}
+
+#seccion-resultados .tarjeta-dorso p {
+    margin: 0.625rem 0;
+}
+
+#seccion-resultados .tarjeta-dorso button {
+    margin-top: 0.625rem;
+    padding: 0.5rem 0.9375rem;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+}
+
+#seccion-resultados .tarjeta-dorso button:hover {
+    background-color: #f40612;
+}
+
+/* ----- Botón "Crear Informe" ----- */
+#btn-crear-informe {
+    margin: 1.25rem auto;
+    display: block;
+    padding: 0.625rem 1.25rem;
+    font-size: 1.125rem;
+    background-color: #BA55D3;
+    color: #fff;
+    border: none;
+}
+
+#btn-crear-informe:hover {
+    background-color: rgba(183, 159, 244, 0.7);
+}
+
+/* ------ Sección del Modal de Informe ------ */
+#seccion-modal-informe .modal-informe {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 3.125rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo transparente */
+}
+
+#seccion-modal-informe .modal-contenido {
+    background-color: #222; /* Aseguramos que el fondo del contenido sea oscuro */
+    margin: auto;
+    padding: 1.25rem; /* 20px a rem */
+    width: 80%;
+    max-width: 40rem;
+    max-height: 80vh;
+    color: #fff;
+    position: relative;
+    overflow-y: auto;
+}
+
+#seccion-modal-informe .cerrar-informe {
+    color: #aaa;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: bold;
+    z-index: 1001; /* Aseguramos que el z-index sea más alto que el del modal */
+    position: relative; /* Para que el z-index tenga efecto */
+}
+
+#seccion-modal-informe .cerrar-informe:hover,
+#seccion-modal-informe .cerrar-informe:focus {
+    color: rgba(26, 70, 213, 0.7);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contenedorInforme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedorInforme > div {
+    width: 100%;
+    max-height: 20rem;
+    margin-bottom: 1rem;
+}
+
+/* ------ Sección del Modal ------ */
+#seccion-modal .modal-detalles {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 3.125rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#seccion-modal .modal-contenido {
+    background-color: #222;
+    margin: auto;
+    padding: 1.25rem;
+    width: 80%;
+    max-width: 50rem;
+    color: #fff;
+}
+
+#seccion-modal .cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+#seccion-modal .cerrar:hover,
+#seccion-modal .cerrar:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#seccion-modal #contenido-detalles img {
+    width: 12.5rem;
+    float: left;
+    margin-right: 1.25rem;
+}
+
+#seccion-modal #contenido-detalles h2 {
+    margin-top: 0;
+}
+
+#seccion-modal #contenido-detalles p {
+    margin-bottom: 0.625rem;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    #seccion-resultados .contenedor-peliculas {
+        grid-template-columns: repeat(auto-fill, minmax(9.375rem, 1fr));
+    }
+
+    #seccion-resultados .tarjeta-contenido {
+        height: 15.625rem;
+    }
+}
+
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 480px) {
+    #seccion-resultados .contenedor-peliculas {
+        grid-template-columns: 1fr; /* Una columna para móviles */
+    }
+
+    #seccion-resultados .tarjeta {
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
+        visibility: visible;
+    }
+
+    #seccion-resultados .tarjeta-contenido {
+        height: auto;
+        overflow: hidden;
+        display: block;
+        visibility: visible;
+    }
+
+    #seccion-resultados .tarjeta-frente,
+    #seccion-resultados .tarjeta-dorso {
+        display: block;
+        visibility: visible;
+    }
+
+    #seccion-resultados .tarjeta-dorso {
+        padding: 0.625rem;
+        box-sizing: border-box;
+    }
+
+    #seccion-resultados .tarjeta-dorso h3 {
+        font-size: 1.25rem;
+    }
+
+    #seccion-resultados .tarjeta-dorso p {
+        margin: 0.3125rem 0;
+        font-size: 1rem;
+    }
+
+    #seccion-resultados .tarjeta-dorso button {
+        margin-top: 0.3125rem;
+        padding: 0.375rem 0.625rem;
+        font-size: 1rem;
+    }
+}
+

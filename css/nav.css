@@ -1,0 +1,122 @@
+/* Navegación (Nav) */
+nav {
+    background: linear-gradient(135deg, #533483, #0f3460, #16213e, #1a1a2e);
+    background-size: cover;
+    padding: 1.25rem 0;
+    text-align: center;
+}
+
+nav .contenedor-busqueda {
+    display: flex;
+    justify-content: center;
+}
+
+nav .buscar-elemento {
+    max-width: 50rem;
+    width: 100%;
+}
+
+nav .buscar-elemento h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.625rem;
+    font-size: 1.25rem;
+}
+
+nav .barra-busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav .barra-busqueda select,
+nav .barra-busqueda input {
+    padding: 0.625rem;
+    font-size: 1rem;
+    border: none;
+    margin: 0.3125rem;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+nav .barra-busqueda input {
+    flex: 1;
+}
+
+nav .barra-busqueda button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    background-color: #4169E1;
+    color: #fff;
+    border: none;
+    margin: 0.3125rem;
+}
+
+nav .barra-busqueda button:hover {
+    background-color: #a097f8;
+}
+
+/* Ajuste de select para pantallas grandes */
+@media (min-width: 769px) {
+    nav .barra-busqueda select {
+        width: auto;
+        flex: none;
+    }
+
+    /* Ajustes para tabletas */
+    @media (min-width: 481px) and (max-width: 768px) {
+        nav .barra-busqueda textarea {
+            width: 90%;
+            margin: 0.3125rem 0;
+            padding: 0.625rem;
+            font-size: 0.875rem;
+            box-sizing: border-box;
+        }
+
+        nav .barra-busqueda select {
+            width: auto;
+            margin: 0.3125rem 0;
+            font-size: 0.875rem;
+            flex: none;
+        }
+    }
+}
+    /* Ajustes para dispositivos móviles */
+@media (max-width: 480px) {
+    nav .buscar-elemento h3 {
+        font-size: 1rem;
+    }
+
+    nav .barra-busqueda {
+        flex-direction: column;
+    }
+
+    nav .barra-busqueda select,
+    nav .barra-busqueda input,
+    nav .barra-busqueda textarea {
+        width: 90%;
+        margin: 0.3125rem 0;
+        padding: 0.375rem;
+        font-size: 0.75rem;
+    }
+
+    nav .barra-busqueda button {
+        width: 90%;
+        padding: 0.375rem 0.75rem;
+        font-size: 0.75rem;
+        box-sizing: border-box;
+    }
+    #btn-crear-informe {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        width: 90%;
+        margin: 1rem auto;
+        }
+    }
+
+
+
+
+
+
