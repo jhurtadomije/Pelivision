@@ -6,9 +6,20 @@
   "scripts": {
     "start": "node index.js",
     "build": "echo 'Build script placeholder'"
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "dotenv": "^16.4.7"
   }
 }
   
+
+ 
+
+   
+   
+  },
+  "dependencies": {
+    // Añade tus dependencias aquí
+  }
+}
