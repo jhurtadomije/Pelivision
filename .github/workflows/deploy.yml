@@ -2,11 +2,6 @@ name: Deploy
 
 on: [push]
 
-permissions:
-  contents: read
-  packages: read
-  pull-requests: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
