@@ -79,7 +79,7 @@
         botonBuscar.addEventListener('click', realizarBusqueda);
 
         window.addEventListener('scroll', function () {
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
                 if (!cargando) {
                     cargarMasPeliculas();
                 }
