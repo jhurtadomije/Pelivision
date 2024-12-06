@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "mkdir -p build && rsync -av --progress --exclude build ./ build",
+   "build": "rm -rf build && mkdir build && cp -r * build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
