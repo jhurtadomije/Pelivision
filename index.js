@@ -20,11 +20,10 @@
         const modalInforme = document.querySelector('.modal-informe');
         const spanCerrarInforme = document.querySelector('span.cerrar-informe');
 
-        // configuración de la API
-        require('dotenv').config();
+        //configuracion de la API
         const CONFIG = {
             apiBase: 'https://www.omdbapi.com/',
-            apiKey: process.env.API_KEY,
+            apiKey: 'bf0461d1',
         };
 
         let paginaActual = 1;
